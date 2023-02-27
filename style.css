@@ -1,0 +1,66 @@
+body{
+    margin: 0px;
+}
+div{
+    display: flex;
+    
+    
+}
+#big{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+img{
+    height: 100px;
+    width: 240px;
+    margin: auto;
+}
+#first{
+    height: 100px;
+    background-color: yellow;
+    
+}
+#second{
+    height: 400px;
+    background-color: aqua;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+#third{
+    height: 400px;
+    background-color: gold;
+    flex-direction: row;
+    
+}
+#two{
+    height: 370px;
+    width: 80vw;
+    background-color: red;
+}
+a{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    
+}
+#three{
+    height: 400px;
+    width: 50vw;
+    background-color: rgb(93, 175, 0);
+
+}
+#four{
+    height: 400px;
+    width: 50vw;
+    background-color: darkcyan;
+}
+#inform{
+    font-size: 30px;
+}
+
