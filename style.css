@@ -12,6 +12,7 @@ div{
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 img{
@@ -21,12 +22,13 @@ img{
 }
 #first{
     height: 100px;
-    background-color: yellow;
+    background-color: white;
+    margin-left: 80px;
     
 }
 #second{
     height: 400px;
-    background-color: aqua;
+    background-color: white;
     
     justify-content: center;
     align-items: center;
@@ -34,14 +36,49 @@ img{
 }
 #third{
     height: 400px;
-    background-color: gold;
+    background-color: rgb(248, 248, 248);
     flex-direction: row;
     
 }
 #two{
     height: 370px;
     width: 80vw;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
+    border: thick double;
+    border-width: 10px;
+    border-style: dashed double none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+    
+
+}
+.movebutton{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+#left{
+    bottom: 5px;
+    left: 5px;
+}
+#right{
+    bottom: 5px;
+    left: 80px;
+}
+
+.slide_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    flex-shrink: 0;
+    transition: left 0.15s;
 }
 a{
     color: black;
@@ -51,16 +88,146 @@ a{
 }
 #three{
     height: 400px;
-    width: 50vw;
-    background-color: rgb(93, 175, 0);
+    width: 100vw;
+    background-color: white;
+    border: thick double;
+    
+    
+    
 
 }
-#four{
-    height: 400px;
-    width: 50vw;
-    background-color: darkcyan;
-}
+
 #inform{
     font-size: 30px;
+}
+#burger{
+    justify-content: left;
+    margin: 0px;
+    display: flex;
+}
+#ham{
+    height: 100vh;
+    width: 350px;
+    background-color: rgba(253, 253, 253, 0.895);
+    position: absolute;
+    left: -350px;
+    top: 0;
+    padding-top: 50px;
+    transition: left 1s;
+
+}
+li{
+    padding: 10px;
+}
+
+
+.hambar{
+    border: 2px solid black;
+    display: block;
+    width: 20px;
+    height: 0px;
+    color: black;
+    margin: 5px;
+   
+
+}
+#hamham{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    cursor: pointer;
+    
+}
+
+
+
+@keyframes topbar {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    35% {
+        transform: translateY(-4px) rotate(0);
+    }
+    60% {
+        transform: translateY(7.5px) rotate(0);
+    }
+    100% {
+        transform: translateY(7.5px) rotate(45deg);
+    }
+}
+
+@keyframes bottombar {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    35% {
+        transform: translateY(4px) rotate(0);
+    }
+    60% {
+        transform: translateY(-7.5px) rotate(0);
+    }
+    100% {
+        transform: translateY(-7.5px) rotate(-45deg);
+    }
+    
+    
+}
+
+@keyframes middlebar {
+    0% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    35% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+    60% {
+        transform: rotate(0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+    
+    
+}
+ul{
+    padding: 20px;
+}
+@keyframes middlebarclose {
+    0% {
+        transform: rotate(0);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+@keyframes bottombarclose {
+    0% {
+        transform: translateY(-7.5px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+    
+    
+}
+@keyframes topbarclose {
+    0% {
+        transform: translateY(7.5px) rotate(45deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+    
+    
 }
 
